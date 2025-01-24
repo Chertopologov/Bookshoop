@@ -1,0 +1,229 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+    padding-top: 125px;
+    padding-bottom: 125px;
+}
+.container{
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+
+/* HEADER */
+
+.header {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+}
+
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 56px;
+    margin-bottom: 48px;
+}
+
+.logo{
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+}
+
+.nav__list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.nav__item{
+    margin: 0 15px;
+}
+
+.nav__link{
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav__link:hover,
+.nav__link.active{
+    color: #007bff;
+}
+
+.actions{
+    display: flex;
+    align-items: center;
+}
+.btn{
+    padding: 8px 15px;
+    background-color: #fff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+/* SLIDER */
+main {
+    width: 100%;
+}
+
+.content-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1140px;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%; /* Ширина слайда */
+    height: 702px;    /* Высота слайда */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: white;
+    text-align: center;
+}
+.slider img {
+    z-index: -1;
+}
+
+.dots {
+    text-align: center;
+    margin-top: 20px;
+    z-index: 2;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #bbb;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #333;
+}
+
+
+
+
+
+/* BOOKS */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(3, auto); 
+}
+
+.book {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.book__cover{
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.book__title{
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.book__author{
+    font-style: italic;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.book__price{
+    font-weight: 700;
+    color: #007bff;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.footer__content{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .header__content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav{
+        margin: 10px 0;
+    }
+    .nav__list {
+        flex-direction: column;
+        padding: 0;
+    }
+    .nav__item{
+        margin: 5px 0;
+    }
+    .actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .search{
+        margin-bottom: 10px;
+    }
+    .hero__title{
+        font-size: 2em;
+    }
+    .hero__text{
+        font-size: 1em;
+    }
+    .book-grid {
+        grid-template-columns: 1fr;
+    }
+}
