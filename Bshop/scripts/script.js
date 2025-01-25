@@ -53,3 +53,16 @@ dots.forEach(dot => {
 });
 
 startInterval();
+
+document.addEventListener('DOMContentLoaded', () => {
+  const buyButtons = document.querySelectorAll('.buy-btn');
+  const cartCount = document.querySelector('.cart-count');
+  let bookCount = 0;
+
+  buyButtons.forEach(button => {
+      button.addEventListener('click', () => {
+          bookCount++;
+          cartCount.textContent = bookCount;
+      });
+  });
+});

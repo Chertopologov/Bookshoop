@@ -11,7 +11,7 @@
 </head>
 <body>
     <header class="header">
-        <div class="container header__content">
+        <div class=" header__content">
             <a href="#" class="logo">Bookshop</a>
             <nav class="nav">
                 <ul class="nav__list">
@@ -30,6 +30,7 @@
                 </button>
                 <button class="btn">
                     <img src="../images/shop bag.svg" alt="svg">
+                    <span class="cart-count">0</span>
                 </button>
             </div>
         </div>
@@ -48,58 +49,118 @@
                     <span class="dot" data-index="2"></span>
                 </div>
             </div>
+            <div class="slider-links">  <!-- Контейнер ссылок -->
+                <a href="#" class="slider-link top-link"> <!-- первая ссылка -->
+                     <span>Change <br>
+                        old book <br>
+                          on new</span> <br>
+                    <img class="arrow" src="../images/arrow.svg" alt="arrow">
+                </a>
+                <a href="#" class="slider-link bottom-link"> <!-- вторая ссылка -->
+                    <span>
+                        top <br>
+                        100 <br>
+                        books <br>
+                        2022
+                    </span> <br>
+                   <img class="arrow" src="../images/arrow.svg" alt="arrow">
+                </a>
+            </div>
         </div>
       
-      <section class="featured">
-          <div class="container">
-              <div class="book-grid">
+        <section class="featured">
+            <div class="container">
                 <div class="book-grid">
                     <div class="book">
-                        <img src="" alt="Book 1" class="book__cover">
-                        <h3 class="book__title">Title book 1</h3>
-                        <p class="book__author">Author 1</p>
-                        <p class="book__price">$19.99</p>
-                    </div>
-                  <div class="book">
-                      <img src="" alt="Book 2" class="book__cover">
-                      <h3 class="book__title">Title book 2</h3>
-                      <p class="book__author">Author 2</p>
-                      <p class="book__price">$24.99</p>
-                  </div>
-                    <div class="book">
-                      <img src="" alt="Book 3" class="book__cover">
-                      <h3 class="book__title">Title book 3</h3>
-                      <p class="book__author">Author 3</p>
-                      <p class="book__price">$15.99</p>
-                  </div>
-                    <div class="book">
-                      <img src="" alt="Book 4" class="book__cover">
-                      <h3 class="book__title">Title book 4</h3>
-                      <p class="book__author">Author 4</p>
-                      <p class="book__price">$29.99</p>
-                  </div>
-                    <div class="book">
-                        <img src="" alt="Book 5" class="book__cover">
-                        <h3 class="book__title">Title book 5</h3>
-                        <p class="book__author">Author 5</p>
-                        <p class="book__price">$19.99</p>
+                        <img src="../images/cover.svg" alt="Book 1" class="book img">
+                        <div class="book__info">
+                            <p class="book__author">Kevin Kwan</p>
+                             <h3 class="book__title">Title book 1</h3>
+                             <div class="book__rating">★★★★★</div>
+                              <p class="book__desc">the outrageously funny debut novel about three super-rich, pedigreed Chinese families and the gossip...</p>
+                            <p class="book__price">$19.99</p>
+                            <button class="buy-btn">Buy Now</button>
+                        </div>
                     </div>
                     <div class="book">
-                        <img src="" alt="Book 6" class="book__cover">
-                        <h3 class="book__title">Title book 6</h3>
-                        <p class="book__author">Author 6</p>
-                        <p class="book__price">$19.99</p>
+                        <img src="../images/cover (1).svg" alt="Book 2" class="book img">
+                         <div class="book__info">
+                            <p class="book__author">Margaret Atwood</p>
+                              <h3 class="book__title">Title book 2</h3>
+                               <div class="book__rating">★★★★☆</div>
+                               <p class="book__desc"> This novel can be interpreted as a double narrative, Offred's tale and the handmaids' tales. The night...</p>
+                            <p class="book__price">$24.99</p>
+                             <button class="buy-btn">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <img src="../images/cover (2).svg" alt="Book 3" class="book img">
+                        <div class="book__info">
+                           <p class="book__author">Aldous Huxley</p>
+                           <h3 class="book__title">Title book 3</h3>
+                             <div class="book__rating">★★★☆☆</div>
+                             <p class="book__desc"> dystopian novel written in 1931 by English author Aldous Huxley, and published in 1932. Largely set in...</p>
+                            <p class="book__price">$15.99</p>
+                            <button class="buy-btn">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <img src="../images/cover (3).svg" alt="Book 4" class="book img">
+                       <div class="book__info">
+                            <p class="book__author">Tara Westover</p>
+                            <h3 class="book__title">Title book 4</h3>
+                             <div class="book__rating">★★☆☆☆</div>
+                              <p class="book__desc"> It is a tale of fierce family loyalty and of the grief that comes with severing the closest of ties. With...</p>
+                            <p class="book__price">$29.99</p>
+                            <button class="buy-btn">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <img src="../images/cover (4).svg" alt="Book 5" class="book img">
+                        <div class="book__info">
+                           <p class="book__author">Marianne Fritz</p>
+                            <h3 class="book__title">Title book 5</h3>
+                             <div class="book__rating">★★★★★</div>
+                              <p class="book__desc"> You discover not an eccentric fluke of literary nature but rather a brilliant and masterful satiris...</p>
+                            <p class="book__price">$19.99</p>
+                             <button class="buy-btn">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <img src="../images/cover (5).svg" alt="Book 6" class="book img">
+                        <div class="book__info">
+                           <p class="book__author">Chris Power</p>
+                             <h3 class="book__title">Title book 6</h3>
+                              <div class="book__rating">★★★★☆</div>
+                               <p class="book__desc"> the stories in Mothers lay bare the emotional and psychic damage of life, love, and abandonment...</p>
+                            <p class="book__price">$19.99</p>
+                             <button class="buy-btn">Buy Now</button>
+                        </div>
                     </div>
                 </div>
-              </div>
-          </div>
-      </section>
+                <button class="load-more-btn">Load More</button>
+            </div>
+            <div class="side-menu">
+                <ul class="side-menu__list">
+                    <li class="side-menu__item active"><a href="#" class="side-menu__link">Architecture</a></li>
+                    <li class="side-menu__item"><a href="#" class="side-menu__link">Art & Fashion</a></li>
+                    <li class="side-menu__item"><a href="#" class="side-menu__link">Biography</a></li>
+                    <li class="side-menu__item"><a href="#" class="side-menu__link">Business</a></li>
+                    <li class="side-menu__item"><a href="#" class="side-menu__link">Crafts & Hobbies</a></li>
+                    <li class="side-menu__item"><a href="#" class="side-menu__link">Drama</a></li>
+                    <li class="side-menu__item"><a href="#" class="side-menu__link">Fiction</a></li>
+                    <li class="side-menu__item"><a href="#" class="side-menu__link">Food & Drink</a></li>
+                    <li class="side-menu__item"><a href="#" class="side-menu__link">Health & Wellbeing</a></li>
+                    <li class="side-menu__item"><a href="#" class="side-menu__link">History & Politics</a></li>
+                    <li class="side-menu__item"><a href="#" class="side-menu__link">Humor</a></li>
+                    <li class="side-menu__item"><a href="#" class="side-menu__link">Psychology</a></li>
+                    <li class="side-menu__item"><a href="#" class="side-menu__link">Science</a></li>
+                    <li class="side-menu__item"><a href="#" class="side-menu__link">Technology</a></li>
+                    <li class="side-menu__item"><a href="#" class="side-menu__link">Travel & Maps</a></li>
+                </ul>
+            </div>
+        </section>
     </main>
-    <footer class="footer">
-        <div class="container footer__content">
-            <p>&copy; 2023 Bookshop. All rights reserved.</p>
-        </div>
-    </footer>
     <script src="../scripts/script.js"></script>
 </body>
 </html>

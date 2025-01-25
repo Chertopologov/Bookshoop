@@ -12,6 +12,9 @@ body {
     max-width: 1440px;
     margin: 0 auto;
 }
+/* main {
+    display: flex;
+} */
 
 
 /* HEADER */
@@ -33,6 +36,7 @@ body {
     align-items: center;
     margin-top: 56px;
     margin-bottom: 48px;
+    padding: 0 166px;
 }
 
 .logo{
@@ -75,20 +79,35 @@ body {
     color: white;
     border: none;
     cursor: pointer;
+    position: relative;
+}
+.cart-btn {
+    position: relative;
+}
+.cart-count {
+    position: absolute;
+    top: -5px; /* Позиционирование сверху */
+    right: -5px; /* Позиционирование справа */
+    background-color: #007bff;
+    color: white;
+    font-size: 0.7rem;
+    padding: 3px 6px;
+    border-radius: 50%;
+    font-weight: bold;
 }
 
 
 
 /* SLIDER */
-main {
-    width: 100%;
-}
 
 .content-wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    position: relative; 
+    overflow: visible;
+    
   }
   .slider-container {
     position: relative;
@@ -137,63 +156,224 @@ main {
 .dot.active {
     background-color: #333;
 }
+.slider-links {
+    position: absolute;
+    top: 80px;
+    right: 100px;
+    display: flex;
+    flex-direction: column;
+    z-index: 30;
+    overflow: visible;
+
+}
+.slider-link {
+    display: flex;
+    flex-direction: column;
+     justify-content: flex-end; /* выравнивание снизу */
+    align-items: flex-start; /* Выравнивание по левой стороне */
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    
+
+}
+.top-link{
+    width: 149px; /* Ширина 149px */
+    height: 204px; /* Высота 204px */
+    background-color: #9E98DC; /* цвет #9E98DC */
+    margin-bottom: 76px; /* Отступ снизу */
+    position: relative;
+    right: 180px
+    
+}
+.bottom-link{
+   width: 158px;
+    height: 273px;
+    background-color: #FF8FE6; /* цвет #FF8FE6 */
+    position: relative;
+    right: 90px
+    
+}
+.slider-link span{
+   text-transform: uppercase;
+   font-size: 18px;
+   font-weight: bold;
+}
+.slider-link img {
+   margin-top: 5px;
+}
 
 
 
 
 
 /* BOOKS */
-.book-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    grid-template-rows: repeat(3, auto); 
+
+.side-menu {
+    width: 416px;
+    height: 710px;
+    background-color: #EFEEF6; 
+    position: absolute;
+     left: 0; 
+    top: 0; 
+    border-radius: 5px;
+    padding: 20px;
 }
 
-.book {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.side-menu__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
-.book__cover{
-    width: 100%;
-    max-height: 300px;
+
+.side-menu__item {
+    margin-bottom: 10px;
+    text-align: center;
+}
+.side-menu__item.active .side-menu__link{
+    background-color: transparent;
+    color: black;
+    font-weight: bold; 
+    font-size: 16px;
+    position: relative; 
+    padding-left: 10px; 
+}
+.side-menu__item.active .side-menu__link::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    background-color: #007bff;
+    border-radius: 50%;
+}
+.side-menu__link {
+    text-decoration: none;
+    color: #333;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 12px;
+}
+
+.side-menu__link:hover {
+    background-color: #ddd;
+}
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 300px);
+    row-gap: 96px;
+    column-gap: 75px;
+    margin-top: 50px;
+    justify-items: center;
+    align-items: center;
+}
+.featured{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.container {
+    max-width: 1224px;
+    margin-left: 356px;
+    margin-right: 160px;
+    z-index: 10 ;
+    display: flex; 
+    flex-direction: column; 
+}
+.book {
+    display: flex;
+    width: 424px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.book img {
+    width: 50%;
+    height: 350px;
     object-fit: cover;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-right: 10px;
+    display: block;
+    padding: 0;
 }
-.book__title{
-    font-size: 1.2em;
+.book__info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.book__author {
+    font-size: 10px;
+    color: #5C6A79;
+    margin: 0;
+}
+
+.book__title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+.book__desc{
+    font-size: 10px;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+.book__rating {
+    font-size: 14px;
+    color: #FFD700; /* Золотой цвет звезд */
     margin-bottom: 5px;
 }
 
-.book__author{
-    font-style: italic;
-    color: #777;
-    margin-bottom: 10px;
+.book__price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    margin-top: 5px;
+}
+.buy-btn {
+    background-color: transparent;
+    color: #4C3DB2;
+    border: 2px solid #4C3DB2;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: auto;
+    align-self: flex-end;
+    width: 176px;
+    height: 45px;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.book__price{
-    font-weight: 700;
-    color: #007bff;
-}
-
-.footer {
-    background-color: #333;
+.buy-btn:hover{
+    background-color: #4C3DB2;
     color: white;
-    text-align: center;
-    padding: 20px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
-.footer__content{
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+
+.load-more-btn{
+    background-color: transparent;
+    color: #4C3DB2;
+     border: 2px solid #4C3DB2;
+     padding: 8px 15px;
+     border-radius: 4px;
+     cursor: pointer;
+     text-transform: uppercase;
+     width: 176px;
+     height: 45px;
+     align-self: center;
+     margin-top: 96px; /* Отступ сверху 96px */
+     transition: background-color 0.3s, color 0.3s;
+ }
+ 
+ .load-more-btn:hover{
+     background-color: #4C3DB2;
+     color: white;
+ }
 
 @media (max-width: 768px) {
     .header__content {
